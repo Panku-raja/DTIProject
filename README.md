@@ -13,7 +13,7 @@ A real-time computer vision project that integrates multiple deep learning model
 
 - **YOLOv8** for Object Detection (vehicles, pedestrians, obstacles)
 - **U-Net** for Lane Detection
-- **CNN (ResNet/MobileNet)** for Traffic Sign Recognition (GTSRB dataset)
+- **CNN** for Traffic Sign Recognition (GTSRB dataset)
 - **CNN** for Weather Classification (Fog, Rain, Clear, etc.)
 - **OpenCV Integration** to overlay real-time predictions on video input
 - Modular architecture and easy-to-extend code
