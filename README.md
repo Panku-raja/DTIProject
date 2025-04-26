@@ -4,7 +4,8 @@
 
 ## 🧠 Motivation
 
-Road safety is a growing concern due to human error and limited driver awareness in poor conditions. This project simulates a real-world driver assistance system to provide visual and intelligent alerts using AI, offering a foundation for real-time safety applications in future autonomous vehicles.
+Road safety is a growing concern due to human error and limited driver awareness in poor conditions. 
+This project simulates a real-world driver assistance system to provide visual and intelligent alerts using AI, offering a foundation for real-time safety applications in future autonomous vehicles.
 
 
 A real-time computer vision project that integrates multiple deep learning models to assist drivers with live object detection, lane keeping, traffic sign recognition, and weather condition classification.
@@ -72,9 +73,15 @@ Special thanks to open-source contributors and research communities.
 ## Security Considerations
 
 ### Fast Gradient Sign Method (FGSM)
-The Fast Gradient Sign Method (FGSM) is an adversarial attack technique that perturbs input images by adding noise in the direction of the gradient of the loss function, scaled by a small epsilon (ε) value. Introduced by Goodfellow et al. (2014), FGSM is relevant to this ADAS pipeline as it can test the robustness of the YOLOv8 object detection model against misclassifications (e.g., cars as pedestrians). Simulated components (U-Net for lane identification, GTSRB CNN for traffic sign recognition, and Weather CNN for weather classification) may also be vulnerable, potentially leading to incorrect annotations in the output image (`output_frame.jpg`).
+The Fast Gradient Sign Method (FGSM) is an adversarial attack technique that perturbs input images by adding noise in the direction
+of the gradient of the loss function, scaled by a small epsilon (ε) value.
+Introduced by Goodfellow et al. (2014), FGSM is relevant to this ADAS pipeline as it can test the robustness of the YOLOv8 object
+detection model against misclassifications (e.g., cars as pedestrians).
+Simulated components (U-Net for lane identification, GTSRB CNN for traffic sign recognition, and Weather CNN for weather classification)
+may also be vulnerable, potentially leading to incorrect annotations in the output image (`output_frame.jpg`).
 
-- **Implementation**: FGSM can be applied by computing the gradient of the model's loss with respect to the input frame (e.g., `perturbed_image = image + ε * sign(∇_x J(θ, x, y))`) using frameworks like TensorFlow or PyTorch.
-- **Impact**: Adversarial examples could compromise safety in real-world ADAS applications.
+**Implementation**: FGSM can be applied by computing the gradient of the model's loss with respect to the input frame
+(e.g., `perturbed_image = image + ε * sign(∇_x J(θ, x, y))`) using frameworks like TensorFlow or PyTorch.
+**Impact**: Adversarial examples could compromise safety in real-world ADAS applications.
 
 
